@@ -1,0 +1,1 @@
+Simply add a umbrella and you will see the result is 68.
