@@ -39,7 +39,7 @@ func main() {
 
 	// Create a writer to write to the output file
 	writer := bufio.NewWriter(result)
-	defer writer.Flush() // Ensure the writer is flushed when done
+	defer writer.Flush()
 
 	// Iterate over each line of the input file
 	for scanner.Scan() {
@@ -47,12 +47,12 @@ func main() {
 		line := strings.Split(lines, " ")
 
 		// Calling on the functions that apply the modifications
-		goreloaded.BintoInt(line)
-		goreloaded.HextoInt(line)
-		goreloaded.ToUpper(line)
-		goreloaded.ToLower(line)
-		goreloaded.Capitalize(line)
-		goreloaded.AtoAn(line)
+		line = goreloaded.BintoInt(line)
+		line = goreloaded.HextoInt(line)
+		line = goreloaded.ToUpper(line)
+		line = goreloaded.ToLower(line)
+		line = goreloaded.Capitalize(line)
+		line = goreloaded.AtoAn(line)
 
 		modifiedLine := strings.Join(line, " ")
 
