@@ -5,13 +5,6 @@ import (
 	"unicode"
 )
 
-package main
-
-import (
-	"strings"
-	"unicode"
-)
-
 func Punctuations(lines []string) []string {
 	correctedLines := make([]string, len(lines))
 	for i, line := range lines {
